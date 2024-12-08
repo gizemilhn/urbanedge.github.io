@@ -1,0 +1,256 @@
+<style>
+    .main-content {
+    margin-top: 50px;;
+    margin-left: 220px;
+    padding: 2rem;
+}
+
+
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table thead {
+    background-color: #1a202c;
+    color: white;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 500px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #343a40;
+}
+
+/* Form */
+.form-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #495057;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #0056b3;
+}
+</style>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanEdge - Admin Paneli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+   
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="container-fluid">
+            <h2>Admin Paneli</h2>
+            <div class="d-flex">
+                <button class="btn btn-outline-light" type="button">Profil</button>
+                <button class="btn btn-outline-light" type="button">Bildirimler</button>
+                <button class="btn btn-outline-light" type="button">Çıkış</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Sidebar -->
+<div id="sidebar" class="col-md-2 position-fixed">
+    <h3 class="text-center text-white">UrbanEdge Admin</h3>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="adminproduct.html">Ürünler</a>
+    <a href="orders.html">Siparişler</a>
+    <a href="adminannouncement.html">Duyurular</a>
+    <a href="users.html">Kullanıcılar</a>
+    <a href="#">Ayarlar</a>
+    <a href="admin.html">Çıkış</a>
+</div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Duyurular Listesi -->
+                <div class="announcement-header">
+                    <h2>Mevcut Duyurular</h2>
+                    <button  class="btn btn-primary">Yeni Duyuru Ekle</button>
+                </div>
+                <table id="announcementTable" class="admin-table">
+                       <thead>
+                           <tr>
+                               <th>Resim Yolu</th>
+                               <th>Başlık</th>
+                               <th>Tarih</th>
+                               <th>İçerik</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td>images/announcement1.jpeg</td>
+                               <td>Yeni Dönem Başlıyor!</td>
+                               <td>2024-12-15</td>
+                               <td>Duyurular sistemimizi yeniledik. Artık tüm gelişmeleri buradan takip edebilirsiniz.</td>
+                           </tr>
+                           <tr>
+                               <td>images/announcement2.jpeg</td>
+                               <td>Kış Koleksiyonu Çıktı</td>
+                               <td>2024-11-18</td>
+                               <td>Yeni kış koleksiyonumuz satışa sunuldu! Sıcak tutan şık kabanlar, polarlar ve botlarla soğuk havalarda bile tarzınızı konuşturun.</td>
+                           </tr>
+                           <tr>
+                               <td>images/announcement3.jpeg</td>
+                               <td>Yeni Özellikler Geldi</td>
+                               <td>2024-12-05</td>
+                               <td>Sitemize yeni özellikler ekledik. Daha fazlasını öğrenmek için duyuruları takip edin! Hızlı alışveriş deneyimi ve kolay ödeme seçenekleriyle alışveriş artık çok daha pratik.</td>
+                           </tr>
+                       </tbody>
+               </table>
+               
+     
+        </main>
+    </div>
+
+    <!-- Yeni Duyuru Modal -->
+    <div class="modal" id="announcementModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Duyuru Ekle</h2>
+            <form id="announcementForm" enctype="multipart/form-data">
+                <!-- Duyuru Başlığı -->
+                <input type="text" id="announcementTitle" class="form-input" placeholder="Duyuru Başlığı" required>
+                
+                <!-- Duyuru İçeriği -->
+                <textarea id="announcementContent" class="form-input" placeholder="Duyuru İçeriği" rows="5" required></textarea>
+                
+                <label for="announcementPDF">Lütfen duyuruya ait PDF dosyasını yükleyin:</label>
+                <input type="file" id="announcementPDF" class="form-input" accept=".pdf" required>
+                
+                <!-- Word Dosyası -->
+                <label for="announcementWord">Lütfen duyuruya ait Word dosyasını yükleyin (.doc, .docx):</label>
+                <input type="file" id="announcementWord" class="form-input" accept=".doc,.docx" required>
+                
+                <!-- Resim Dosyası -->
+                <label for="announcementImage">Lütfen duyuru için bir resim yükleyin:</label>
+                <input type="file" id="announcementImage" class="form-input" accept="image/*" required>
+                
+                <!-- Gönder Butonu -->
+                <button type="submit" class="btn-save">Kaydet</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("announcementModal");
+    const openModalBtn = document.querySelector(".btn.btn-primary"); // Düzeltildi
+    const closeModalBtn = document.querySelector(".close-btn");
+    const announcementForm = document.getElementById("announcementForm");
+
+    // Modalı açma
+    openModalBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    // Modalı kapatma
+    closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Duyuru formunu gönderme işlemi
+    announcementForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const title = document.getElementById("announcementTitle").value;
+        const content = document.getElementById("announcementContent").value;
+        const pdfFile = document.getElementById("announcementPDF").files[0];
+        const wordFile = document.getElementById("announcementWord").files[0];
+        const imageFile = document.getElementById("announcementImage").files[0];
+
+        // Form verilerinin konsola yazdırılması
+        console.log("Başlık: " + title);
+        console.log("İçerik: " + content);
+        console.log("PDF Dosyası: " + pdfFile.name);
+        console.log("Word Dosyası: " + wordFile.name);
+        console.log("Resim: " + imageFile.name);
+
+        // Veriler backend'e gönderilebilir (örneğin AJAX veya form veri işlemesi ile)
+
+        // Modal'ı kapatma
+        modal.style.display = "none";
+        announcementForm.reset();  // Formu sıfırlama
+    });
+});
+    </script>
+</body>
+</html>

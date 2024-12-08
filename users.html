@@ -1,0 +1,153 @@
+<style>
+ .user-content {
+            margin-left: 220px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .user-content h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .btn-add-user {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            float: right; /* Butonu sağa yerleştirir */
+            margin-bottom: 20px; /* Buton ile tablo arasına boşluk ekler */
+        }
+
+        .btn-add-user:hover {
+            background-color: #0056b3;
+        }
+
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 50px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-table thead {
+            background-color: #1a202c;
+            color: white;
+        }
+
+        .user-table th,
+        .user-table td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .user-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    
+</style>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanEdge - Admin Paneli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+   
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="container-fluid">
+            <h2>Admin Paneli</h2>
+            <div class="d-flex">
+                <button class="btn btn-outline-light" type="button">Profil</button>
+                <button class="btn btn-outline-light" type="button">Bildirimler</button>
+                <button class="btn btn-outline-light" type="button">Çıkış</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Sidebar -->
+<div id="sidebar" class="col-md-2 position-fixed">
+    <h3 class="text-center text-white">UrbanEdge Admin</h3>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="adminproduct.html">Ürünler</a>
+    <a href="orders.html">Siparişler</a>
+    <a href="adminannouncement.html">Duyurular</a>
+    <a href="users.html">Kullanıcılar</a>
+    <a href="#">Ayarlar</a>
+    <a href="admin.html">Çıkış</a>
+</div>
+
+    <div class="user-content">
+        <button class="btn-add-user">Yeni Kullanıcı Ekle</button>
+
+        <div class="user-list">
+            <h2>Kullanıcılar</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ad</th>
+                        <th>Email</th>
+                        <th>Durum</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ali Yılmaz</td>
+                        <td>ali@example.com</td>
+                        <td>Aktif</td>
+                        <td>
+                            <button class="btn btn-edit">Düzenle</button>
+                            <button class="btn btn-delete">Sil</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ayşe Demir</td>
+                        <td>ayse@example.com</td>
+                        <td>Pasif</td>
+                        <td>
+                            <button class="btn btn-edit">Düzenle</button>
+                            <button class="btn btn-delete">Sil</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="userModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Yeni Kullanıcı Ekle</h2>
+            <form id="userForm">
+                <input type="text" class="form-input" placeholder="Ad" required>
+                <input type="email" class="form-input" placeholder="Email" required>
+                <select class="form-input">
+                    <option value="aktif">Aktif</option>
+                    <option value="pasif">Pasif</option>
+                </select>
+                <button type="submit" class="btn-save">Kaydet</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

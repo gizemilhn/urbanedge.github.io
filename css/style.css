@@ -1,0 +1,1397 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+.marquee-container {
+  background-color: #a9a9a9; /* Daha koyu bir arka plan rengi */
+  padding: 10px 0; /* Üst ve alt boşluk */
+  width: 100%;
+  overflow: hidden;
+  
+  
+}
+
+.marquee-text {
+  display: inline-block;
+  color: white; /* Yazı rengi beyaz */
+  font-size: 1.5rem; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+  padding-left: 100%; /* Başlangıçta sağda olacak */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #0c0c0c;
+  background-color: #f7f7f7;
+  overflow-x: hidden;
+}
+
+.layout_padding {
+  padding: 70px 0;
+}
+
+.layout_padding2 {
+  padding: 75px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 75px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 75px;
+}
+
+.layout_padding-top {
+  padding-top: 90px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 90px;
+}
+
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+
+.heading_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.heading_container h2 {
+    position: relative;
+    margin-bottom: 0;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.heading_container h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background: #800000;
+    margin: 10px auto 10px;
+}
+
+.heading_container h2 span {
+  color: #800000;
+}
+
+.heading_container p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.heading_container.heading_center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: initial;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*header section*/
+.hero_area {
+  position: relative ;
+  min-height: auto ;
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: flex ;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal ;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+}
+
+.sub_page .hero_area {
+  min-height: auto ;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) ;
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) ;
+}
+
+.header_section {
+    padding: 15px 0 ;
+}
+
+.header_section .container-fluid {
+  padding-right: 25px ;
+  padding-left: 25px ;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif ; 
+}
+
+.navbar-brand span {
+  font-weight: bold ;
+  font-size: 32px ;
+  color: #000000 ;
+}
+
+
+.custom_nav-container .navbar-nav {
+  margin-left: auto ;
+}
+
+.custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 20px ;
+    color: #131313 ;
+    text-align: center ;
+    text-transform: uppercase ;
+    border-radius: 5px ;
+    -webkit-transition: all 0.3s ;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 700 ;
+}
+
+
+.custom_nav-container .navbar-nav .nav-item .nav-link svg {
+  width: 17px !important;
+  height: auto !important;
+  fill: #000000 !important;
+  margin-bottom: 2px !important;
+}
+
+.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+  color: #800000 !important;
+}
+
+.custom_nav-container .navbar-nav .nav-item:hover .nav-link svg, .custom_nav-container .navbar-nav .nav-item.active .nav-link svg {
+  fill: #800000 !important;
+}
+
+.custom_nav-container .nav_search-btn {
+  width: 35px !important;
+  height: 35px !important;
+  padding: 0 !important;
+  border: none !important;
+  color: #000000 !important;
+}
+
+.custom_nav-container .nav_search-btn:hover {
+  color: #800000 !important;
+}
+
+.custom_nav-container .navbar-toggler {
+  outline: none !important;
+}
+
+.custom_nav-container .navbar-toggler {
+  padding: 0 !important;
+  width: 37px !important;
+  height: 42px !important;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
+}
+
+.custom_nav-container .navbar-toggler span {
+  display: block !important;
+  width: 35px !important;
+  height: 4px !important;
+  background-color: #000000 !important;
+  margin: 7px 0 !important;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
+  position: relative !important;
+  border-radius: 5px !important;
+  transition: all 0.3s !important;
+}
+
+.custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  top: -10px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.custom_nav-container .navbar-toggler span::after {
+  top: 10px;
+}
+
+.custom_nav-container .navbar-toggler[aria-expanded="true"] {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before, .custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0;
+}
+
+/*end header section*/
+/* slider section */
+/* Slider ana kapsayıcısı */
+.custom-carousel {
+  position: relative;
+  margin: 20px auto; /* Slider'ı ortalamak için */
+  max-width: 800px; /* Maksimum genişlik ayarı */
+}
+
+/* Slider resimleri */
+.custom-carousel .carousel-item img {
+  width: 100%;
+  height: 500px; /* Yükseklik ayarı */
+  object-fit: cover; /* Resimlerin kesilmeden görünmesi için */
+  border-radius: 10px; /* Kenarları yuvarlamak için */
+}
+
+/* Önceki ve sonraki butonlar */
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  filter: invert(1); /* Butonları beyaz yapmak için */
+}
+
+/* Butonların üzerine gelindiğinde */
+.custom-carousel .carousel-control-prev:hover,
+.custom-carousel .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Arka plan rengi */
+  border-radius: 50%; /* Yuvarlak butonlar */
+}
+
+
+
+.product_section .heading_container {
+  margin-bottom: 20px;
+}
+
+.product_section .box {
+    position: relative;
+    margin-top: 25px;
+    padding: 35px 35px;
+    background-color: white;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px -5px rgba(0,0,0,.2);
+    border: solid #fff 10px;
+}
+
+.product_section .box .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
+}
+
+.product_section .box .img-box img {
+  max-width: 100%;
+  max-height: 250px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.product_section .box .detail-box {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product_section .box .detail-box h5 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product_section .box .detail-box h6 {
+  margin-top: 10px;
+  color: #002c3e;
+  font-weight: 600;
+}
+
+.product_section .box:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.product_section .box:hover .option_container {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.arrival_section {
+    background-color: transparent;
+}
+.product_section .option_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.product_section .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product_section .options a {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 30px;
+  width: 165px;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  margin: 5px 0;
+}
+
+.product_section .options .option1 {
+  background-color: #800000;
+  border: 1px solid #800000;
+  color: #ffffff;
+}
+
+.product_section .options .option1:hover {
+  background-color: transparent;
+  color: #800000;
+}
+
+.product_section .options .option2 {
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+
+.product_section .options .option2:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+.product_section .btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 45px;
+}
+
+.product_section .btn-box a {
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: #800000;
+  border: 1px solid #800000;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.product_section .btn-box a:hover {
+  background-color: transparent;
+  color: #800000;
+}
+
+.arrival_section {
+  background-color: transparent;
+  position: relative; /* Ensure the section is positioned relative */
+}
+
+.arrival_section .heading_container {
+  color: #00080b;
+  margin-bottom: 10px;
+  position: relative; /* Position relative to allow z-index */
+  z-index: 2; /* Ensure it appears above the background */
+}
+
+.arrival_section .box {
+  padding: 120px 45px;
+  position: relative; /* Ensure this container is positioned relative */
+  z-index: 2; /* Above the background image */
+}
+
+.arrival_section .arrival_bg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Behind the content */
+  overflow: hidden; /* Hide overflow */
+}
+
+.arrival_section .arrival_bg_box img {
+  position: absolute; /* Position the image absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  width: auto; /* Allow width to adjust */
+  height: auto; /* Allow height to adjust */
+  max-width: none; /* Prevent the image from being resized */
+  max-height: none; /* Prevent the image from being resized */
+  min-width: 100%; /* Ensure the image covers the width */
+  min-height: 100%; /* Ensure the image covers the height */
+  transform: translate(-50%, -50%); /* Center the image */
+  z-index: -1; /* Ensure the image is behind the content */
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.arrival_section a {
+  margin-top: 50px;
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #800000;
+  border: 1px solid #800000;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative; /* Ensure the link is positioned relative */
+  z-index: 2; /* Above the background image */
+}
+
+.arrival_section a:hover {
+  background-color: transparent;
+  color: #800000;
+}
+
+.why_section .box {
+    text-align: center;
+    margin-top: 45px;
+    background-color: #800020;
+    padding: 45px 50px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.detail-box h5 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.remove_line_bt h2::after {
+    display: none;
+}
+
+.why_section .box .img-box {
+  margin-bottom: 15px;
+}
+
+.why_section .box .img-box svg {
+  width: 55px;
+  height: auto;
+  fill: #ffffff;
+}
+
+.subscribe_section {
+  text-align: center;
+}
+
+.subscribe_section .box {
+  background-color: #d3d3d3;
+  padding: 75px 45px;
+}
+
+.subscribe_section .subscribe_form .heading_container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #00080b;
+}
+
+.subscribe_section .subscribe_form .heading_container h2 {
+  padding: 0 25px;
+}
+
+.subscribe_section .subscribe_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscribe_section .subscribe_form form input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 90px;
+    outline: none;
+    padding: 5px 25px;
+    background-color: #ffffff;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.subscribe_section .subscribe_form form input::-webkit-input-placeholder {
+  color: #171620;
+}
+
+.subscribe_section .subscribe_form form input:-ms-input-placeholder {
+  color: #171620;
+}
+
+.subscribe_section .subscribe_form form input::-ms-input-placeholder {
+  color: #171620;
+}
+
+.subscribe_section .subscribe_form form input::placeholder {
+  color: #171620;
+}
+
+.subscribe_section .subscribe_form form button {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #800000;
+  border: 1px solid #800000;
+  color: #ffffff;
+  border-radius: 35px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  margin-top: 35px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 285px;
+}
+
+.subscribe_section .subscribe_form form button:hover {
+  background-color: transparent;
+  color: #800000;
+}
+
+.client_section .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 55px;
+}
+
+.client_section .box .img_container {
+    width: auto;
+    height: auto;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.client_section .box .img_container .img-box {
+    width: auto;
+    height: auto;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin-right: -1px;
+}
+
+.client_section .box .img_container .img-box .img_box-inner {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.client_section .box .img_container .img-box .img_box-inner img {
+  width: 100%;
+}
+
+.client_section .box .detail-box {
+  margin-top: 25px;
+}
+
+.client_section .box .detail-box h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.client_section .box .detail-box h6 {
+  font-size: 15px;
+  color: #999998;
+}
+
+.client_section .carousel-control-prev,
+.client_section .carousel-control-next {
+  top: 43%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 1;
+  width: auto;
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  color: #ffffff;
+  background-color: #f7444e;
+  border-radius: 100%;
+}
+
+.client_section .carousel-control-prev:hover,
+.client_section .carousel-control-next:hover {
+  background-color: #212121;
+}
+
+.client_section .carousel-control-prev {
+  left: 25%;
+}
+
+.client_section .carousel-control-next {
+  right: 25%;
+}
+.marquee-container {
+  background-color: #a9a9a9; /* Daha koyu bir arka plan rengi */
+  padding: 10px 0; /* Üst ve alt boşluk */
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-text {
+  display: inline-block;
+  color: white; /* Yazı rengi beyaz */
+  font-size: 1.5rem; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+  padding-left: 100%; /* Başlangıçta sağda olacak */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+      .card-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+      }
+
+      .card-content img {
+          max-width: 50%;
+          border-radius: 8px;
+      }
+
+      .quote-card {
+          text-align: center;
+          font-style: italic;
+          font-weight: 500;
+      }
+
+      .quote-card::before {
+          content: "“";
+          font-size: 3rem;
+          color: #aaa;
+      }
+
+      .quote-card::after {
+          content: "”";
+          font-size: 3rem;
+          color: #aaa;
+      }
+      
+  .team_section .img-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 0; /* Kare görünüm */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .team_section .detail-box h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #343a40;
+  }
+
+  .team_section .detail-box h6 {
+      font-size: 1rem;
+      color: #6c757d;
+  }
+
+  .team_section .detail-box p {
+      font-size: 1rem;
+      color: #495057;
+      margin-top: 10px;
+  }
+
+      .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+      filter: brightness(0) saturate(100%) invert(6%) sepia(93%) saturate(7179%) hue-rotate(18deg) brightness(85%) contrast(113%);
+  }
+
+
+/*# sourceMappingURL=style.css.map */
+
+.heading_container.heading_center h3 {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+li.nav-item ul {
+    background: #f7f7f7 !important;
+    padding: 8px 10px !important;
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+    width: 190px !important;
+}
+
+li.nav-item ul li {
+    float: left !important;
+    width: 100% !important;
+    margin: 6px 0 !important;
+}
+
+li.nav-item ul li a {
+    color: #212529 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.2px !important;
+    margin-top: 10px !important;
+    transition: opacity 3s ease-in-out !important;
+}
+
+li.nav-item ul li a:hover, li.nav-item ul li a:focus {
+    color: #800000 !important;
+}
+.dropdown-submenu {
+  position: relative !important;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%; /* Position the submenu to the right */
+  margin-top: -6px; /* Align with the parent item */
+  display: none; /* Hide the submenu by default */
+  transition: opacity 3s ease-in-out;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+  display: block; /* Show the submenu on hover */
+}
+
+
+.inner_page_head {
+    background: #800000;
+    text-align: center;
+    color: #f7f7f7;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.inner_page_head h3 {
+    font-size: 42px;
+    font-weight: 800;
+}
+.story_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+
+
+/** footer **/
+
+footer {
+    background: #f8f8f8;
+    padding: 90px 0 70px;
+}
+
+.logo_footer {
+    margin-bottom: 30px;
+}
+
+.information_f p {
+    margin-bottom: 1.2rem;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.widget_menu h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    margin-bottom: 25px;
+}
+
+.widget_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget_menu ul li {
+    float: left;
+    width: 100%;
+}
+
+.widget_menu ul li a {
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 0;
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.field {
+    display: flex;
+}
+
+.widget_menu {
+    float: left;
+    width: 100%;
+}
+
+div.form_sub .field input[type="email"], div.form_sub .field input[type="email"]:hover, div.form_sub .field input[type="email"]:focus {
+    padding: 10px 110px 10px 15px;
+    border-radius: 0;
+    border: solid #ccc 1px;
+    font-size: 14px;
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+    height: 48px;
+}
+
+.form_sub {
+    position: relative;
+}
+
+.form_sub input[type="email"] + input[type="submit"] {
+    position: absolute;
+    right: 0;
+    background: #800000;
+    color: #fff;
+    border: none;
+    top: 0px;
+    font-size: 14px;
+    height: 48px;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+form input {
+    background: #fff;
+    border: solid #ccc 1px;
+    padding: 15px 15px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    line-height: normal;
+}
+
+form textarea {
+    background: #fff;
+    border: solid #ccc 1px;
+    padding: 15px 15px;
+    width: 100%;
+    min-height: 150px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    line-height: normal;
+}
+
+form input[type="submit"] {
+    border: none;
+    padding: 15px 45px;
+    width: auto;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: normal;
+    margin: 0 auto;
+    display: flex;
+    background: #333;
+    color: #fff;
+    font-weight: 600;
+    transition: ease all 0.1s;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+    background: #800000;
+    color: #fff;
+}
+
+/** cpy **/
+
+.cpy_ {
+    background: #222;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cpy_ p {
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.cpy_ p a {
+    margin: 0;
+    color: #800000;
+    font-size: 15px;
+    font-weight: 400;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-content img {
+  max-width: 50%;
+  border-radius: 8px;
+}
+
+.quote-card {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.quote-card::before {
+  content: "“";
+  font-size: 3rem;
+  color: #aaa;
+}
+
+.quote-card::after {
+  content: "”";
+  font-size: 3rem;
+  color: #aaa;
+}
+
+.team_section .img-container img {
+width: 100%;
+height: auto;
+border-radius: 0; /* Kare görünüm */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team_section .detail-box h5 {
+font-size: 1.5rem;
+font-weight: bold;
+color: #343a40;
+}
+
+.team_section .detail-box h6 {
+font-size: 1rem;
+color: #6c757d;
+}
+
+.team_section .detail-box p {
+font-size: 1rem;
+color: #495057;
+margin-top: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+filter: brightness(0) saturate(100%) invert(6%) sepia(93%) saturate(7179%) hue-rotate(18deg) brightness(85%) contrast(113%);
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-content img {
+  max-width: 50%;
+  border-radius: 8px;
+}
+
+
+.contact-form-box {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.why_section {
+  padding: 50px 0;
+}
+
+/* Sayfa düzeni */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Ofis adresi stil */
+.office-address {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.office-address h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.office-address p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.office-address a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Mobil uyum için */
+@media (max-width: 768px) {
+  .row {
+     flex-direction: column;
+  }
+}
+.why_section {
+  padding: 50px 0;
+}
+
+/* Sayfa düzeni */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Ofis adresi stil */
+.office-address {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.office-address h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.office-address p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.office-address a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Mobil uyum için */
+@media (max-width: 768px) {
+  .row {
+     flex-direction: column;
+  }
+}
+/* Genel stil ayarları */
+.option1 {
+    position: relative;
+    display: inline-block;
+}
+.box {
+    position: relative; /* Dropdown menüsünün sadece bu kutunun içinde konumlanmasını sağlar */
+}
+/* Dropdown (açılır sekme) */
+.dropdown-content {
+    display: none;
+    position: absolute;  /* Butonun yanında konumlanması için absolute pozisyon */
+    left: 0;             /* Butonun sol tarafında görünsün */
+    top: 35px;           /* Butondan biraz aşağıda başlasın */
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    width: 180px;        /* Genişlik */
+    z-index: 9999;          /* Üst üste binmeyi engelle */
+}
+
+/* Active state ile görünür yapma */
+.dropdown-content.active {
+    display: block;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            margin: 15px;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .modal-img {
+            max-width: 100%;
+            height: auto;
+        }
+          
+
+        **Offcanvas içeriği**
+        .offcanvas {
+          background-color: #f8f9fa; /* Panel arka plan rengi */
+          
+      }
+      
+      .offcanvas-header {
+          border-bottom: 1px solid #dee2e6;
+      }
+      
+      .offcanvas-body {
+          padding: 1rem;
+      }
+      
+      .list-group-item {
+          background-color: #ffffff;
+      }
+      .offcanvas.offcanvas-end {
+          width: 600px !important; /* İstediğiniz genişliği ayarlayın */
+      }
+      .custom-input {
+        width: 100%;
+        max-width: 500px ;
+      }
+      .quantity-btn {
+          border: none;
+          background: none;
+          font-size: 18px; /* İşaret boyutu */
+          cursor: pointer;
+          color: #000; /* İşaret rengi */
+          padding: 0 5px; /* Yatay boşluk */
+        }
+      
+        .quantity-btn:hover {
+          color: #800000; /* Hover rengi */
+        }
+      
+        .quantity-input {
+          width: 25px;
+          text-align: center;
+        }
+        .card {
+          border-radius: 16px;
+        }
+      
+        .credit-inputs {
+          border-radius: 8px;
+          margin-bottom: 15px;
+          font-size: 16px;
+          padding: 10px;
+          width: 100%;
+        }
+        .small-inputs {
+          width: 48%;
+          display: inline-block;
+        }
+        .credit-card-label {
+          font-size: 14px;
+          font-weight: bold;
+          margin-bottom: 5px;
+          display: block;
+        }
+      
+        .card-logo {
+          width: 40px;
+          margin-left: 10px;
+        }
+      
+        .logos-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 10px;
+        }
+      
+        .card-logo {
+          width: 50px;
+          margin-left: 10px;
+        }
+      
+        .summary-section {
+          background-color: #f8f9fa;
+          border-radius: 12px;
+          padding: 20px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+      
+        .summary-section p {
+          margin: 0;
+          font-size: 16px;
+        }
+      
+        .total {
+          font-size: 18px;
+          font-weight: bold;
+          color: #800000;
+        }
+      
+        .checkout-button {
+          margin-top: 20px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .checkout-button {
+          background-color: #800000 !important; /* Bordo renk */
+          border: 2px solid #800000 !important; /* Bordo kenarlık */
+          color: white !important; /* Buton metni beyaz */
+      }
+      
+      .checkout-button:hover {
+          background-color: transparent !important; /* Şeffaf arka plan */
+          color: #800000 !important; /* Metin bordoya döner */
+          border: 2px solid #800000 !important; /* Kenarlık bordo kalır */
+      }
+
+     
+       
+
+http://kute-themes.com/html/boutique/html/index.html
+https://template.hasthemes.com/noraure/noraure/index.html
+https://preview.hasthemes.com/xoss-preview/xoss/index.html
+
